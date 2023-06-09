@@ -51,6 +51,29 @@ class _GamePageState extends State<GamePage> {
       ],
     ));
   }
+  // This is a _headerText() 
+       Widget _headerText() {
+    return Column(
+      children: [
+        const Text(
+          "Tic Tac Toe",
+          style: TextStyle(
+            color: Colors.green,
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        Text(
+          "$currentPlayer turn",
+          style: const TextStyle(
+            color: Color(0xFFFFD700),
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    );
+  }
 
   
 
