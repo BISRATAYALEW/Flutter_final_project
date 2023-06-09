@@ -35,7 +35,7 @@ class _GamePageState extends State<GamePage> {
         body: Stack(
       children: [
         Image.asset(
-          '/home/jahye/Desktop/Flutter_final_project/image/bg1.jpg',
+          './bg1.jpg',
           fit: BoxFit.cover,
           height: double.infinity,
           width: double.infinity,
@@ -80,7 +80,6 @@ class _GamePageState extends State<GamePage> {
 
   Widget _gameContainer() {
     return Container(
-      
       height: MediaQuery.of(context).size.height / 2,
       width: MediaQuery.of(context).size.height / 2,
       margin: const EdgeInsets.all(8),
@@ -97,9 +96,7 @@ class _GamePageState extends State<GamePage> {
   Widget _box(int index) {
     return InkWell(
       onTap: () {
-        //on click of box
         if (gameEnd || occupied[index].isNotEmpty) {
-          //Return if game already ended or box already clicked
           return;
         }
 
@@ -192,7 +189,6 @@ class _GamePageState extends State<GamePage> {
     bool draw = true;
     for (var occupiedPlayer in occupied) {
       if (occupiedPlayer.isEmpty) {
-        //at least one is empty not all are filled
         draw = false;
       }
     }
