@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'f_screen.dart';
 import 'game_page.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: GamePage(),
+      home: screen(),
     );
   }
 }

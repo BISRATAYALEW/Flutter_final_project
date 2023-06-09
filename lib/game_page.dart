@@ -35,7 +35,7 @@ class _GamePageState extends State<GamePage> {
         body: Stack(
       children: [
         Image.asset(
-          'image/bg.jpeg',
+          '/home/jahye/Desktop/Flutter_final_project/image/bg1.jpg',
           fit: BoxFit.cover,
           height: double.infinity,
           width: double.infinity,
@@ -80,7 +80,7 @@ class _GamePageState extends State<GamePage> {
 
   Widget _gameContainer() {
     return Container(
-      decoration: BoxDecoration(color: Colors.greenAccent),
+      
       height: MediaQuery.of(context).size.height / 2,
       width: MediaQuery.of(context).size.height / 2,
       margin: const EdgeInsets.all(8),
