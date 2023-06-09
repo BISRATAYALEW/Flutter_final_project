@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'end_game.dart';
+
 class GamePage extends StatefulWidget {
   @override
   State<GamePage> createState() => _GamePageState();
@@ -51,8 +53,9 @@ class _GamePageState extends State<GamePage> {
       ],
     ));
   }
-  // This is a _headerText() 
-       Widget _headerText() {
+
+  // This is a _headerText()
+  Widget _headerText() {
     return Column(
       children: [
         const Text(
@@ -74,8 +77,6 @@ class _GamePageState extends State<GamePage> {
       ],
     );
   }
-
-  
 
   Widget _gameContainer() {
     return Container(
@@ -166,7 +167,16 @@ class _GamePageState extends State<GamePage> {
       if (playerPosition0.isNotEmpty) {
         if (playerPosition0 == playerPosition1 &&
             playerPosition0 == playerPosition2) {
-          //all equal means player won
+          changeTurn();
+          if (currentPlayer == 'X') {
+            _win = 'x';
+            Color _color = Color.fromARGB(255, 29, 159, 29);
+            end_game().end(context, currentPlayer, _win, _color);
+          } else {
+            _win = 'o';
+            Color _color = Color(0xFFFFD700);
+            end_game().end(context, currentPlayer, _win, _color);
+          }
 
           gameEnd = true;
           return;
